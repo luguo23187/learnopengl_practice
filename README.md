@@ -4,11 +4,9 @@ Records of learning opengl through the learnopengl project.
 OpenGL practice records based on [learnopengl tutorials](https://learnopengl.com/).
 
 ### Libraries used
-We've used a couple of built-in libraries and glad, glfw, glm libraries:
+Several designated third-party libraries are used according to learnopengl:
 
 ```
-#include <iostream>
-#include <vector>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -16,7 +14,7 @@ We've used a couple of built-in libraries and glad, glfw, glm libraries:
 #include <glm/gtc/type_ptr.hpp>
 ```
 
-In other hand, to talk about how it works and what is its structure. Firstly, we can see our folders such as:
+### File and folder description
 1. [/Shaders](https://github.com/alexjr2001/RubikCube_OpenGL/tree/main/shaders): Where we work with two types of them, the vector shader [shader.vs](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/shaders/shader.vs) which is able to manipulate any of the corner vertices, I mean we manage the rendering with this and the fragment shader [shader.fs](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/shaders/shader.fs) where we can modify how the space between the vertices look like (colors, textures, etc.).
 
 2. [/texture](https://github.com/alexjr2001/RubikCube_OpenGL/tree/main/texture): It is the place where we store all the images(textures) that we would want to see in our faces of a rendering. We have to understand the fragment shader in order to work with both together, thus we can achieve a good-looking object.
