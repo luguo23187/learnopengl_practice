@@ -15,13 +15,19 @@ Several designated third-party libraries are used according to learnopengl:
 ```
 
 ### File and folder description
-1. [/Shaders](https://github.com/alexjr2001/RubikCube_OpenGL/tree/main/shaders): Where we work with two types of them, the vector shader [shader.vs](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/shaders/shader.vs) which is able to manipulate any of the corner vertices, I mean we manage the rendering with this and the fragment shader [shader.fs](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/shaders/shader.fs) where we can modify how the space between the vertices look like (colors, textures, etc.).
+Note: The file path in the file is the relative path of the local machine.
+1. [/learnopengl_practice_main_file](https://github.com/luguo23187/learnopengl_practice/tree/main/learnopengl_practice_main_file):This folder contains the code guided in [learnopengl tutorials](https://learnopengl.com/), including building packages for opengl objects, cameras, etc., multi-object multi-light rendering, frame buffering, and sky boxes, where files with a.vs suffix are slice shaders, files with a.fs suffix are fragment shaders, and files with a.gs suffix are geometry shaders.
 
-2. [/texture](https://github.com/alexjr2001/RubikCube_OpenGL/tree/main/texture): It is the place where we store all the images(textures) that we would want to see in our faces of a rendering. We have to understand the fragment shader in order to work with both together, thus we can achieve a good-looking object.
+2. [/sample_model](https://github.com/luguo23187/learnopengl_practice/tree/main/sample_model): This folder contains the model and texture files contained in the Loading Models chapter of [learnopengl tutorials](https://learnopengl.com/).
 
-3. [/src](https://github.com/alexjr2001/RubikCube_OpenGL/tree/main/src): The most important folder because it is where all the magic occurs, we have all the files of the source code.
-    - Main and Global: In [main.cpp](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/main.cpp) we call [global.cpp](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/global.h) where we initialize all the OpenGL Window, the menu, we load the textures and we manage all the input callbacks.
-    - [Cubito.h](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/Cubito.h) and [Cubito.cpp](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/Cubito.cpp): It's where we have our cube class.
-    - [Camara.h](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/Camera.h) and [Camera.cpp](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/Camera.cpp): It's where we have our small camera class.
-    - [Shader_s.h](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/shader_s.h), [glad.c](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/glad.c) and [stb_image.h](https://github.com/alexjr2001/RubikCube_OpenGL/blob/main/src/stb_image.h): Shader class and stb_image provided by LearnOpenGL.
-    - [/Solver](https://github.com/alexjr2001/RubikCube_OpenGL/tree/main/src/Solver): It is the solver applied in our Rubik's cube, where we pass as a parameter a std::vector<std::string> of the current shuffle and it returns the solution with the same type of container. It was extracted from [hkociemba's repository](https://github.com/hkociemba?tab=repositories)
+3. [/image](https://github.com/luguo23187/learnopengl_practice/tree/main/image): This folder contains the texture files used in [learnopengl tutorials](https://learnopengl.com/).
+
+### Practice demo
+#### Rubik's cube simulator
+A Rubik's cube was simulated with opengl and related third-party libraries. Keys could be used to rotate the cube, mouse and arrow keys could be used to move the Angle of view, and Thislethwaite method was used to give the restoration path in the disturbed state, and the cube was animated.
+
+The files are located in the [/learnopengl_practice_main_file](https://github.com/luguo23187/learnopengl_practice/tree/main/learnopengl_practice_main_file), include [application_for_rubikcube.cpp](https://github.com/luguo23187/learnopengl_practice/blob/main/learnopengl_practice_main_file/application_for_rubikcube.cpp), [Makecube.cpp](https://github.com/luguo23187/learnopengl_practice/blob/main/learnopengl_practice_main_file/MakeCube.cpp), [Makecube.h](https://github.com/luguo23187/learnopengl_practice/blob/main/learnopengl_practice_main_file/MakeCube.h) and files in [/learnopengl_practice_main_file/solve](https://github.com/luguo23187/learnopengl_practice/tree/main/learnopengl_practice_main_file/solve).
+
+![Menu](https://github.com/luguo23187/learnopengl_practice/assets/103297770/09c7cc30-e649-44de-b9d1-67414faddc40)
+![Simulated Rubik's cube](https://github.com/luguo23187/learnopengl_practice/assets/103297770/9d399a19-2c82-4fe6-a90c-a626cb05f3e3)
+![Simulated Rubik's cube](https://github.com/luguo23187/learnopengl_practice/assets/103297770/1361e5d5-9733-41f0-81df-3faa8c0bbe15)
