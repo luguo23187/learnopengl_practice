@@ -31,3 +31,5 @@ The files are located in the [/learnopengl_practice_main_file](https://github.co
 ![Menu](https://github.com/luguo23187/learnopengl_practice/assets/103297770/09c7cc30-e649-44de-b9d1-67414faddc40)
 ![Simulated Rubik's cube](https://github.com/luguo23187/learnopengl_practice/assets/103297770/9d399a19-2c82-4fe6-a90c-a626cb05f3e3)
 ![Simulated Rubik's cube](https://github.com/luguo23187/learnopengl_practice/assets/103297770/1361e5d5-9733-41f0-81df-3faa8c0bbe15)
+
+#### Model spatial path visualization
